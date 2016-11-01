@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="utf-8" />
+	<title>环境展示</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="Keywords" content="关键词"/>
+	<meta name="Description" content="网页的描述"/>
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/factory.css" type="text/css"/>
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<!--[if lt IE 9]>
+	    <script src="js/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!-- #include file="header.html" -->
+<!----公司介绍---->
+<div class="comMain">
+	<div class="comConment">
+		<!--左侧栏-->
+		<aside class="sideBar" id="sideBar">
+			<h2 id="sideTitle">中央工厂</h2>
+			<ul class="sideList" id="sideList">
+				<li><a href="factory.html" target="_self" title="工厂简介">工厂简介 <b>Factory profile</b><i class="iconfont">&#xe602;</i></a></li>
+				<li><a class="cur" href="facShow.html" target="_self" title="环境展示">环境展示 <b>Factory album</b><i class="iconfont">&#xe602;</i></a></li>
+				<li><a href="facPro.html" target="_self" title="产品展示">产品展示 <b>Product display</b><i class="iconfont">&#xe602;</i></a></li>
+			</ul>
+			<!--#include file="sideAd.html"-->
+		</aside>
+		<div class="breadNav">
+			<i class="iconfont">&#xe60a;</i><a href="">首页</a><code>></code><a href="">中央工厂</a><code>></code>环境展示
+		</div>
+		<article class="facMain">
+			<h3>环境展示</h3>
+			<div class="facCon" id="facCon">							
+				<ul id="showMain" style="left:-820px;">
+					<li><img src="images/test/scroll.jpg"/><p>中央工厂干净明亮的走廊</p></li>
+				    <li><img src="images/test/scroolTwo.jpg"/><p>中央工厂干净明亮的走廊2</p></li>
+				    <li><img src="images/test/scroolOne.jpg"/><p>中央工厂干净明亮的走廊3</p></li>
+				    <li><img src="images/test/scroolTwo.jpg"/><p>中央工厂干净明亮的走廊2</p></li>
+				    <li><img src="images/test/scroolOne.jpg"/><p>中央工厂干净明亮的走廊3</p></li>				    
+				    <li><img src="images/test/scroll.jpg"/><p>中央工厂干净明亮的走廊1</p></li>
+				</ul>
+				<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+			    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+			</div>
+			<div class="Share">
+				<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>
+				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+		<!-- #include file="scroll.html" -->
+		</article>		
+	</div>	
+</div>
+<!-- #include file="navSlide.html" -->
+<!-- #include file="footer.html" -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+         var OfacCon = document.getElementById("facCon");
+        var showMain = document.getElementById("showMain");
+        var showMainLi = showMain.getElementsByTagName("li");
+        var Oprev = document.getElementById("prev");
+        var Onext = document.getElementById("next");
+        showMain.style.width = parseInt((showMainLi.length) * 820) + "px";
+        var zgleft = parseInt((showMainLi.length - 1) * 820);
+        function animate(offset) {
+            var newLeft = parseInt(showMain.style.left);
+            showMain.style.left = newLeft + 'px';
+            if (offset == 1) {
+                if (newLeft > -zgleft) {
+                    showMain.style.left = (parseInt(showMain.style.left) - 820) + 'px';
+                }
+                else {
+                    showMain.style.left = 0 + 'px';
+                }
+            }
+            else {
+                if (newLeft < 0) {
+                    showMain.style.left = (parseInt(showMain.style.left) + 820) + 'px';
+                }
+                else {
+                    showMain.style.left = (-zgleft) + 'px';
+                }
+            }
+        }
+        Onext.onclick = function (){
+            animate(1);
+        }
+        Oprev.onclick = function () {
+            animate(0);
+        }
+	//内页向上滚动	
+	var mocBox=document.getElementById("scrollText");
+	mocBox.innerHTML+=mocBox.innerHTML;	
+	mocBox.scrollTop=0;
+	var iLiHeight=24;
+	var time;
+	function starMove(){
+		mocBox.scrollTop++;
+		time=setInterval('scrollUp()',50);
+	}
+	function scrollUp(){		
+		if(mocBox.scrollTop % iLiHeight==0){
+			clearInterval(time);
+			setTimeout("starMove()",2000)
+		}else{
+			mocBox.scrollTop++;
+			if(mocBox.scrollTop>=mocBox.scrollHeight/2){
+				mocBox.scrollTop=0;
+			}
+		}
+	}
+	setTimeout("starMove()",2000);
+</script>
+</body>
+</html>

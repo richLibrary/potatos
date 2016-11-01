@@ -1,0 +1,158 @@
+@charset "utf-8";
+@import "_variables";
+@import "_pagation";
+@import "_scroll";
+/*-- 版块公用代码  --*/
+.Share{height:auto;overflow:hidden;margin:70px 0 11px;border-bottom:1px dashed #E4E4E4;padding-bottom:10px;}
+.imgCom,.brandImg{height:auto;overflow:hidden;text-align:center;margin:20px 0;}
+/*----公司简介版块代码----*/
+.walkRight{
+            height:auto;overflow:hidden;border:$border;background:#fff;margin-left:300px;padding:46px 38px 30px;
+            h3{font:24px/24px $font;color:#222;margin:0 0 20px;text-align:center;}
+            p{font:14px/22px $font;color:#555;}
+            strong{font:bold 14px/24px $font;color:#333;margin:30px 0 0;display:block;}
+      }       
+/*----风雨历程----*/
+.courseMain{
+             height:auto;position:relative;overflow:hidden;padding-top:6px;
+             i{position:absolute;left:125px;top:-2px;font-size:28px;color:#f7b324;}
+             strong{font:bold 20px/22px $font;color:#89582b;position:absolute;left:175px;top:3px;}
+             .cirBtm{position:absolute;left:133px;bottom:0;}
+           }
+.courseList{
+            height:auto;border-left:4px solid #ded4d6;margin-left:137px;padding:68px 0 40px;
+            li{
+                padding-bottom:10px;position:relative;height:auto;
+                .titImg{display:block;position:absolute;left:-140px;top:0;}
+                .circle{position:absolute;left:-8px;top:20px;}               
+                &:hover{
+                        cursor:pointer;
+                    .courseCon{
+                                background:#fac251;
+                                h3{color:#fff;}
+                                p{color:#fff;}
+                                i{color:#FAC251;}
+                              }
+                }
+              }
+            
+}
+.courseCon{
+            background:#e9e5e4;@include border-radius(6px);padding:20px;margin-left:22px;position:relative;
+            h3{font:bold 20px/35px $font;color:#666;border-bottom:1px solid #ccc8c6;}
+            i{position:absolute;left:-19px;top:18px;color:#E9E5E4;}
+            p{font:14px/22px $font;color:#666;margin-top:6px;}
+          }
+/*----资质荣誉----*/ 
+.honRight{
+            height:auto;overflow:hidden;border:$border;background:#fff;margin-left:300px;padding:46px 28px 30px;
+            h3{font:24px/24px $font;color:#222;text-align:center;}
+         }         
+.honnorList{
+            height:auto;overflow:hidden;margin-top:25px;
+            li{
+                float:left;margin:20px 9px;@include wh(258px,234px);border:$border;
+                .honImg{
+                          @include wh(258px,194px);display:table-cell;vertical-align:middle;text-align:center;*display:block;*font-size:175px;*font-family:Arial;
+                          img{vertical-align:middle;}                          
+                        }
+                span{display:block;font:bold 14px/40px $font;color:#555;text-align:center;border-top:$border;}
+              }
+     }
+     
+.center-block, .carrousel, .carrousel .wrapper {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.carrousel {
+  position: fixed;
+  background:rgba(10,10,10,0.8);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc0a0a0a,endColorstr=#cc0a0a0a);zoom:1;
+  display: none;
+  z-index:10;
+}
+:root .carrousel{filter:none\9;}
+.carrousel .wrapper {
+  width:100%;
+  height:100%;
+  text-align:center;
+  display:table;
+}
+.carrousel .wrapper p{display:table-cell;vertical-align:middle}
+.carrousel .wrapper > img {
+  width: 100%;
+}
+.close {
+  cursor: pointer;
+  color: #FFF;
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 18px;
+  z-index:11;
+}
+.close:hover {
+  font-size: 20px;
+  color: #DDD;
+}
+/*----训练学院----*/
+.schIntro{
+            height:auto;overflow:hidden;
+             p{font:14px/22px $font;color:#555;margin-bottom:20px;}
+            strong{font:bold 14px/24px $font;color:#333;margin:10px 0 0;display:block;}
+         }     
+.schNews{
+          overflow:hidden;height:auto;
+          li{
+              padding:0 0 20px 180px;background:#fff;position:relative;border-bottom:$border;margin-top:36px;height:120px;
+              .newImg{display:block;@include wh(160px,100px);position:absolute;left:0;top:0;}
+              .schTitle{
+                         font:16px/22px $font;color:#333;display:block;
+                         &:hover{text-decoration:underline;}
+                       }
+              p{font:14px/20px $font;color:#999;max-height:72px;overflow:hidden;margin-top:8px;}
+              time{
+                    display:block;font:12px/22px arial;color:#aaa;position:absolute;bottom:15px;left:180px;
+                    i{margin-right:2px;vertical-align:-2px;}
+              }
+            }
+}
+.schImg{height:auto;overflow:hidden;text-align:center;margin:22px 0 10px;}
+.walkPhoto {@include wh(820px,450px);overflow:hidden;position:relative;margin-top:25px;padding-bottom:38px;}
+#walkMain{height:450px;position:absolute;z-index:1;width:820px;}
+#walkMain li{
+               float:left;@include wh(820px,450px);position:relative;
+               span{position:absolute;left:0;bottom:-38px;font:14px/38px $font;color:#89572a;text-align:center;width:820px;background:#fdfaf1;display:block;}
+            }
+.arrow {cursor:pointer;line-height:108px;text-align:center;font-size:30px;width:30px;height:108px;position:absolute;z-index:2;top:180px;background:rgba(0,0,0,0.3);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000);zoom:1;color: #fff;}
+.arrow:hover{background:rgba(228,0,17,0.7);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2e40011,endColorstr=#b2e40011);zoom:1;}
+:root .arrow{filter:none\9;}
+.facCon:hover .arrow { display:block;}
+#prev {left:0}
+#next {right:0}
+/*----产品详情----*/
+.detMain{
+            height:auto;overflow:hidden;margin-left:300px;background:#fff;border:$border;padding:45px 40px 30px;
+            h3{font:24px/24px $font;color:#222;text-align:center;}
+         }
+         
+.detImg{height:auto;overflow:hidden;text-align:center;margin-top:45px;}
+.nextNav{
+          margin:20px 0 36px;overflow:hidden;height:24px;position:relative;color:#777;
+          li{position:absolute;top:0;font:14px/24px $font;color:#777;width:360px;@include hide}
+          .nextPage{left:0;}
+          .prevPage{right:0;}
+        }
+ /*----学院详情页----*/       
+.schText{
+            height:auto;overflow:hidden;padding:0 38px 30px;border:$border;background:#fff;margin-left:300px;
+            h3{font:24px/24px $font;color:#222;margin:40px 0 0;text-align:center;}
+            p{font:14px/22px $font;color:#555;margin-top:20px;}
+         }
+.schAuther{
+          height:30px;overflow:hidden;text-align:center;border:$border;background:#f7f7f7;font:12px/30px $font;color:#777;margin:25px 0 30px;
+          span{display:inline-block;margin-right:12px;}
+        }

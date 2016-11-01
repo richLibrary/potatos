@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="utf-8" />
+	<title>新店展示</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="Keywords" content="关键词"/>
+	<meta name="Description" content="网页的描述"/>
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/merchat.css" type="text/css"/>
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<!--[if lt IE 9]>
+	    <script src="js/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!-- #include file="header.html" -->
+<!----公司介绍---->
+<div class="comMain">
+	<div class="comConment">
+		<!--左侧栏-->
+		<aside class="sideBar" id="sideBar">
+			<h2 id="sideTitle">新店展示</h2>
+			<ul class="sideList" id="sideList">
+				<li><a href="mercond.html" target="_self" title="加盟条件">加盟条件 <b>Joining conditions</b><i class="iconfont">&#xe602;</i></a></li>
+				<li><a href="mersteps.html" target="_self" title="加盟流程">加盟流程 <b>Joining steps</b><i class="iconfont">&#xe602;</i></a></li>
+				<li><a href="merFAQ.html" target="_self" title="常见问题">常见问题 <b>FAQ</b><i class="iconfont">&#xe602;</i></a></li>
+				<li><a href="merchat.html" target="_self" title="空白市场">空白市场 <b>Blank Market</b><i class="iconfont">&#xe602;</i></a></li>
+				<li><a class="cur" href="merstore.html" target="_self" title="新店展示">新店展示 <b>Store display</b><i class="iconfont">&#xe602;</i></a></li>
+			</ul>
+			<!--#include file="sideAd.html"-->
+		</aside>
+		<div class="breadNav">
+			<i class="iconfont">&#xe60a;</i><a href="">首页</a><code>></code><a href="">招商加盟</a><code>></code>新店展示
+		</div>
+		<article class="storeRight">
+			<h3>姐弟俩新店展示</h3>
+			<ul class="storeList">
+				<li>
+					<a href="" class="storeImg"><img src="images/test/store.jpg" width="396" height="251" alt=""></a>
+					<h4>郑州百盛店</h4>
+					<a class="storeBtn" href="merDetal.html" target="_self" title="">查看详情 ></a>
+				</li>
+				<li>
+					<a href="" class="storeImg"><img src="images/test/storeOne.jpg" width="396" height="251" alt=""></a>
+					<h4>常德花园路店</h4>
+					<a class="storeBtn" href="merDetal.html" target="_self" title="">查看详情 ></a>
+				</li>
+				<li>
+					<a href="" class="storeImg"><img src="images/test/storeTwo.jpg" width="396" height="251" alt=""></a>
+					<h4>许昌时代广场店</h4>
+					<a class="storeBtn" href="merDetal.html" target="_self" title="">查看详情 ></a>
+				</li>
+				<li>
+					<a href="" class="storeImg"><img src="images/test/storeThr.jpg" width="396" height="251" alt=""></a>
+					<h4>乌鲁木齐人民路店</h4>
+					<a class="storeBtn" href="merDetal.html" target="_self" title="">查看详情 ></a>
+				</li>
+				<li>
+					<a href="" class="storeImg"><img src="images/test/storeFou.jpg" width="396" height="251" alt=""></a>
+					<h4>焦作铜马路店</h4>
+					<a class="storeBtn" href="merDetal.html" target="_self" title="">查看详情 ></a>
+				</li>
+				<li>
+					<a href="" class="storeImg"><img src="images/test/storeFiv.jpg" width="396" height="251" alt=""></a>
+					<h4>北京西单店</h4>
+					<a class="storeBtn" href="merDetal.html" target="_self" title="">查看详情 ></a>
+				</li>
+			</ul>
+			<!-- #include file="pagination.html" -->
+			<div class="Share Other">
+				<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>
+				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+		<!-- #include file="scroll.html" -->
+		</article>		
+	</div>	
+</div>
+<!-- #include file="navSlide.html" -->
+<!-- #include file="footer.html" -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	//内页向上滚动	
+	var mocBox=document.getElementById("scrollText");
+	mocBox.innerHTML+=mocBox.innerHTML;	
+	mocBox.scrollTop=0;
+	var iLiHeight=24;
+	var time;
+	function starMove(){
+		mocBox.scrollTop++;
+		time=setInterval('scrollUp()',50);
+	}
+	function scrollUp(){		
+		if(mocBox.scrollTop % iLiHeight==0){
+			clearInterval(time);
+			setTimeout("starMove()",2000)
+		}else{
+			mocBox.scrollTop++;
+			if(mocBox.scrollTop>=mocBox.scrollHeight/2){
+				mocBox.scrollTop=0;
+			}
+		}
+	}
+	setTimeout("starMove()",2000);
+</script>
+</body>
+</html>

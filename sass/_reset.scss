@@ -1,0 +1,21 @@
+@charset "UTF-8";
+*{word-break:break-word;}
+body,h1, h2, h3, h4, h5, h6,p,dl,dd,dt,ol,ul,li{margin:0;padding:0;}
+ul, li {list-style:none;}
+body { font-family:"\5FAE\8F6F\96C5\9ED1";color:#333;margin:0 auto;-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text;}
+img { border: 0; -webkit-user-select: none; -moz-user-select: none;-ms-user-select: none; user-select: none;-webkit-touch-callout: none; touch-callout: none;}
+html { font-family: sans-serif;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none; user-select:none;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+:focus {outline:0;}
+:link, :visited {text-decoration:none;}
+a {outline:none;text-decoration:none;cursor:pointer;color:#333; }
+a:active, a:hover{outline:0;}
+a:hover{text-decoration:none;outline:none;}
+button, html input[type="button"], input[type="reset"], input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+input[type="checkbox"], input[type="radio"]{box-sizing:border-box;padding:0;}
+button {overflow:visible;}
+button, select {text-transform:none;}
+input {line-height:normal;}
+input::-webkit-input-placeholder {color:#999 !important;font-family:"\9ED1\4F53"; }
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary{
+    display: block;
+}

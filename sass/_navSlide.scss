@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*----右侧浮动导航----*/
+.sibarNav{@include wh(74px,auto);position:fixed;right:20px;bottom:192px;z-index:999;z-index:8;}
+.peoImg{position:absolute;top:0;left:8px;@include wh(58px,104px)}
+.codeImg{width:146px;height:146px;position:absolute;right:73px;bottom:115px;background:#fff;z-index:-1;display:none;overflow:hidden;}
+.sibarMain{
+            margin-top:50px;height:auto;background:#edc957;@include border-radius(6px);padding:58px 6px 0;
+            li{border-top:1px solid #221910;padding:6px 0;
+                a{
+                    font:bold 12px/24px $font;color:#221910;text-align:center;display:block;
+                    img{display:block;}
+                    i{
+                        font-size:24px;font-weight:normal;
+                        &.backTop{font-size:14px;}
+                      }
+                 &:hover{
+                          color:#8f4c00;
+                          i{color:#8f4c00;}
+                        }
+                 }
+              }
+        }

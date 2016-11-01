@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="utf-8" />
+	<title>供应商信息</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="Keywords" content="关键词"/>
+	<meta name="Description" content="网页的描述"/>
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/contact.css" type="text/css"/>
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<!--[if lt IE 9]>
+	    <script src="js/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!-- #include file="header.html" -->
+<!----公司介绍---->
+<div class="comMain">
+	<div class="comConment">
+		<!--左侧栏-->
+		<aside class="sideBar" id="sideBar">
+			<h2 id="sideTitle">联系我们</h2>
+			<ul class="sideList" id="sideList">
+				<li><a href="" target="_self" title="联系方式">联系方式 <b>Contact us</b><i class="iconfont">&#xe602;</i></a></li>
+				<li><a class="cur" href="" target="_self" title="供应商信息">供应商信息 <b>Supplier information</b><i class="iconfont">&#xe602;</i></a></li>
+			</ul>
+			<!--#include file="sideAd.html"-->
+		</aside>
+		<div class="breadNav">
+			<i class="iconfont">&#xe60a;</i><a href="">首页</a><code>></code><a href="">联系我们</a><code>></code>供应商信息
+		</div>
+		<article class="inforMain">
+			<h3>姐弟俩供应商合作需求</h3>
+			<p>姐弟俩餐饮管理有限公司全年寻求快餐各方面供应商合作</p>
+			<dl class="inforObject">
+				<dt>姐弟俩的供应商合作对象：</dt>
+				<dd>各类优质餐具（如陶瓷碗、勺子、碟子、托盘等）</dd>
+				<dd>优等级原材料（如海带丝、黄花菜、香菇等）</dd>
+				<dd>各类优等级调味品</dd>
+				<dd>高质纸箱、泡沫、纸杯、打包盒等</dd>
+			</dl>
+			<dl class="inforStand">
+				<dt>姐弟俩选择供应商的标准：</dt>
+				<dd><b><span>要求</span>01</b>选择能及时准确的提供优质优价的物料或服务的供应商；</dd>
+				<dd><b><span>要求</span>02</b>选择能及时准确的提供优质优价的物料或服务的供应商；</dd>
+				<dd><b><span>要求</span>03</b>选择能及时准确的提供优质优价的物料或服务的供应商；</dd>
+				<dd><b><span>要求</span>04</b>选择能及时准确的提供优质优价的物料或服务的供应商；</dd>
+				<dd><b><span>要求</span>05</b>选择能及时准确的提供优质优价的物料或服务的供应商；</dd>
+			</dl>
+			<div class="inforAddres">
+				<span class="inforLine">姐弟俩供应商合作联系方式</span>
+				<div class="inforTel">TEL <strong>0371-65999195</strong><b class="inforTip">转后勤采购部  宋经理</b></div>
+				<p>周一至周五  8:30~12:00  13:00~18:00</p>
+				<p>地址：郑州市紫荆山路陇海路交叉口方圆创世A座2003室</p>
+			</div>
+			<div class="inforSelect">
+				另寻求郑州市150-300㎡适合做餐饮门面，电话：18838083193
+			</div>
+			<div class="Share">
+				<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>
+				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+			<!-- #include file="scroll.html" -->
+		</article>		
+	</div>	
+</div>
+<!-- #include file="navSlide.html" -->
+<!-- #include file="footer.html" -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	//内页向上滚动	
+	var mocBox=document.getElementById("scrollText");
+	mocBox.innerHTML+=mocBox.innerHTML;	
+	mocBox.scrollTop=0;
+	var iLiHeight=24;
+	var time;
+	function starMove(){
+		mocBox.scrollTop++;
+		time=setInterval('scrollUp()',50);
+	}
+	function scrollUp(){		
+		if(mocBox.scrollTop % iLiHeight==0){
+			clearInterval(time);
+			setTimeout("starMove()",2000)
+		}else{
+			mocBox.scrollTop++;
+			if(mocBox.scrollTop>=mocBox.scrollHeight/2){
+				mocBox.scrollTop=0;
+			}
+		}
+	}
+	setTimeout("starMove()",2000);
+</script>
+</body>
+</html>

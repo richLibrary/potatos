@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import "_variables";
+@import "_pagation";
+/*-- 右侧内容  --*/
+.menuMain{height:auto;overflow:hidden;margin-left:300px;background:#fff;border:$border;padding:25px 30px 30px;}
+.menuList{
+            height:auto;overflow:hidden;
+            li{
+                float:left;margin:20px 9px;
+                .menuImg{
+                          display:block;@include wh(258px,232px);border:$border;
+                          span{display:block;font:14px/40px $font;color:#86592f;text-align:center;}
+                        }
+              }
+     }
+/*-- 菜单详情  --*/
+.detMain{
+            height:auto;overflow:hidden;margin-left:300px;background:#fff;border:$border;padding:45px 40px 30px;
+            h3{font:24px/24px $font;color:#222;text-align:center;}
+         }
+         
+.detImg{height:auto;overflow:hidden;text-align:center;margin-top:45px;}
+.Share{height:auto;overflow:hidden;margin:70px 0 11px;border-bottom:1px dashed #E4E4E4;padding-bottom:10px;}
+.nextNav{
+          margin:20px 0 36px;overflow:hidden;height:24px;position:relative;color:#777;
+          li{position:absolute;top:0;font:14px/24px $font;color:#777;width:360px;@include hide}
+          .nextPage{left:0;}
+          .prevPage{right:0;}
+        }

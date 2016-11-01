@@ -1,0 +1,55 @@
+@charset "utf-8";
+@import "_variables";
+@import "_pagation";
+@import "_scroll";
+.Share{height:auto;overflow:hidden;margin:70px 0 11px;border-bottom:1px dashed #E4E4E4;padding-bottom:10px;}
+//工厂简介
+.facMain{
+          height:auto;overflow:hidden;margin-left:300px;background:#fff;border:$border;padding:45px 39px 30px;
+          h3{font:24px/26px $font;color:#222;text-align:center;}
+        }
+.facText{
+          height:auto;overflow:hidden;margin-top:40px;
+          strong{font:bold 14px/24px $font;color:#003333;}
+          p{font:14px/22px $font;color:#555;margin-bottom:30px;}
+        }
+.facImg{height:auto;overflow:hidden;text-align:center;margin:20px 0;}
+//环境展示
+.facCon {@include wh(820px,450px);overflow:hidden;position:relative;margin-top:45px;padding-bottom:38px;}
+#showMain{height:450px;position:absolute;z-index:1;width:820px;}
+#showMain li{
+              float:left;@include wh(820px,450px);position:relative;
+              p{position:absolute;left:0;bottom:-38px;font:14px/38px $font;color:#89572a;text-align:center;width:820px;background:#fdfaf1;}
+            }
+.arrow {cursor:pointer;display:none;line-height:108px;text-align:center;font-size:30px;width:30px;height:108px;position:absolute;z-index:2;top:180px;background:rgba(0,0,0,0.3);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000);zoom:1;color: #fff;}
+.arrow:hover{background:rgba(228,0,17,0.7);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2e40011,endColorstr=#b2e40011);zoom:1;}
+:root .arrow{filter:none\9;}
+.facCon:hover .arrow{display:block;}
+#prev { left:0;}
+#next { right:0;}
+//产品展示
+.proMain{height:auto;overflow:hidden;margin-left:300px;background:#fff;border:$border;padding:25px 30px 0;}
+.proList{
+            height:auto;overflow:hidden;
+            li{
+                float:left;margin:20px 9px;
+                .proImg{
+                          display:block;@include wh(258px,232px);border:$border;
+                          span{display:block;font:14px/40px $font;color:#86592f;text-align:center;}
+                        }
+              }
+     }
+     
+/*-- 产品显示详情  --*/
+.detMain{
+            height:auto;overflow:hidden;margin-left:300px;background:#fff;border:$border;padding:45px 40px 30px;
+            h3{font:24px/24px $font;color:#222;text-align:center;}
+         }
+         
+.detImg{height:auto;overflow:hidden;text-align:center;margin-top:45px;}
+.nextNav{
+          margin:20px 0 36px;overflow:hidden;height:24px;position:relative;color:#777;
+          li{position:absolute;top:0;font:14px/24px $font;color:#777;width:360px;@include hide}
+          .nextPage{left:0;}
+          .prevPage{right:0;}
+        }

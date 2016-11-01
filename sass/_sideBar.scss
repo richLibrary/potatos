@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/*----左侧栏----*/
+.sideBar{
+          @include wh(280px,auto);float:left;z-index:9;
+          h2{font:24px/45px $font;color:#89592c;background:url(../images/walkBg.png) no-repeat 130px 0px scroll;border-bottom:1px solid #89572a;}
+        }
+.sideList{
+            height:auto;overflow:hidden;
+            li{
+                float:left;margin-top:8px;
+                a{
+                    display:block;font:bold 14px/48px $font;color:#6e4116;padding-left:22px;@include wh(256px,48px);background:#fff;color:#6e4116;border:1px solid #ddd;
+                    i{float:right;color:#6E4116;font-size:12px;margin-right:12px;}
+                    b{font:12px/48px $font;}
+                    &.cur{
+                            background:url(../images/walkBg.png) no-repeat right top scroll;color:#fff;
+                            i{color:#fff;}
+                        }
+                    &:hover{
+                            background:url(../images/walkBg.png) no-repeat right top scroll;color:#fff;
+                            i{color:#fff;}
+                           }
+                  }
+              }
+          }
+.sideAd{height:auto;overflow:hidden;}
+.sideImg{display:block;margin-top:10px;@include wh(280px,100px)}
+.tipImg{display:block;margin-top:10px;@include wh(248px,218px)}
+.rollbox{
+          position:fixed;width:280px;z-index:11;
+          h2{font:24px/45px $font;color:#89592c;background:url(../images/walkBg.png) no-repeat 130px 0px scroll;border-bottom:1px solid #89572a;}
+        }
+.rollbox .tipImg{display:none;}

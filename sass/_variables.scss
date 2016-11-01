@@ -1,0 +1,59 @@
+@charset "utf-8";
+@mixin all{
+    width:100%;
+    height:auto;
+    position:relative;
+    overflow:hidden;
+}
+@mixin center{
+    width:1200px;
+    height:auto;
+    margin:0 auto;
+    overflow:hidden;
+}
+@mixin border-radius ($radius) {
+    -webkit-border-radius:$radius;     
+       -moz-border-radius:$radius;
+           border-radius:$radius;
+}
+@mixin box-shadow ($shadow) {
+    -webkit-box-shadow:$shadow;     
+       -moz-box-shadow:$shadow;
+           box-shadow:$shadow;
+}
+@mixin transition ($transition) {
+    -webkit-transition:$transition;     
+       -moz-transition:$transition;
+           transition:$transition;
+}
+@mixin transform ($transform) {
+    -webkit-transform:$transform;     
+       -moz-transform:$transform;
+           transform:$transform;
+}
+@mixin wh($w,$h){
+  width: $w;
+  height: $h;
+}
+@mixin filter(){
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000);
+    zoom:1;
+}
+@mixin filterOne(){
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+    zoom:1;  
+}
+@mixin rounded($side, $radius: 10px) {
+  border-#{$side}-radius: $radius;
+  -moz-border-radius-#{$side}: $radius;
+  -webkit-border-#{$side}-radius: $radius;
+}
+@mixin bgsize($bg){
+    $img-src:"../images";
+    background:url(#{$img-src}/#{$bg}) no-repeat scroll 0 0;
+}
+@mixin hide(){text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+$border:1px solid #e4e4e4;
+$dashed:1px dashed #e4e4e4;
+$font:"\5FAE\8F6F\96C5\9ED1";
+$fonts:"\5B8B\4F53";

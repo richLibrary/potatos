@@ -1,0 +1,34 @@
+@charset "utf-8";
+/*-- 头部  --*/
+header{@include all;@include bgsize("topbg.jpg");position:relative;height:98px;overflow:inherit;}
+.headMain{
+        @include wh(1200px,auto);position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;z-index:8;
+        .logo{display:block;@include wh(209px,98px);float:left;text-indent:-999em;@include bgsize("logo.png");background-position:0 19px;}  
+   } 
+Nav{height:98px;position:relative;margin-left:302px;}
+#iconBtn{position:absolute;right:24px;top:41px;font-size:18px;color:#FFF5B4;cursor:pointer;}
+.navList{
+       @include wh(857px,98px);margin:0 42px 0 0;float:right;
+       li{
+           float:left;position:relative;
+           >a{
+               display:block;font:16px/26px "微软雅黑";color:#FFF5B4;@include wh(120px,auto);z-index:11;padding:16px 0;margin:20px 0;text-align:center;position:relative;
+            }
+         }
+    }
+.navSlide{
+            background:url(../images/slideCom.png) no-repeat 0 0 scroll;height:auto;overflow:hidden;padding:70px 0 12px;position:absolute;top:0;left:0;display:none;z-index:10;
+            >a{font:14px/34px $font;color:#fff5b4;display:block;@include wh(120px,auto);text-align:center;}
+         }
+.slideTwo{background-position:-120px 0;}
+.slideThr{background-position:-240px 0;}
+.slideFou{background-position:-360px 0;}
+.slideFiv{background-position:0 0;}
+.slideSix{background-position:-600px 0;}
+#searchWarp{height:30px;position:absolute;right:8px;top:33px;}
+.searchInput{@include wh(0,16px);@include border-radius(20px);border:none;padding:6px 0;}
+.iconTwo{display:none;}
+.iconThr{display:none;}
+#searchWarp.show .searchInput{display:block;@include transition(all .5s);@include wh(200px,16px);border:$border;padding:6px 0 6px 33px;}
+#searchWarp.show .iconTwo{display:block;top:5px;left:11px;color:#E4E4E4;@include transition(all .5s ease 1s);position:absolute;font-size:18px;}
+#searchWarp.show .iconThr{top:4px;right:16px;color:#E4E4E4;position:absolute;font-size:18px;cursor:pointer;}

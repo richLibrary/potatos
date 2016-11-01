@@ -1,0 +1,89 @@
+@charset "utf-8";
+@import "_variables";
+@import "_pagation";
+@import "_scroll";
+.Share{height:auto;overflow:hidden;margin:70px 0 11px;border-bottom:1px dashed #E4E4E4;padding-bottom:10px;}
+/*-- 右侧内容  --*/
+.contactMain{
+              height:auto;overflow:hidden;margin-left:300px;background:#fff;border:$border;padding:50px 33px 30px;
+              p{font:bold 16px/22px $font;color:#e5000e;margin:14px 0 34px 25px;}
+            }
+.contactList{
+            height:auto;overflow:hidden;
+            li{
+                float:left;margin:0 6px 24px;border:$border;border-top:2px solid #8d8d8d;padding:6px;background:#fff;@include wh(250px,163px);position:relative;
+                &:hover{
+                        border:1px solid #b67208;border-top:2px solid #b67208;
+                        .contactText{
+                                      background:#fbfdf2;
+                                      h3{color:#875424;}                                     
+                                      span{color:#b67208;}
+                                      .conLogo{display:block;}
+                                    }
+                        }
+              }
+         }
+.contactText{
+             height:127px;padding:18px 10px;position:relative;background:#fbfbfb;
+             h3{font:bold 15px/19px $font;color:#555;margin-bottom:20px;}
+             a{
+                display:inline-block;font-size:14px;color:#666;text-decoration:underline;margin:30px 18px 0 5px;
+                &:hover{color:#e40011;}
+              }
+             .conLogo{display:none;position:absolute;right:-6px;top:70px;z-index:9;}
+             span{
+                    display:block;font:bold 14px/22px $font;color:#555;
+                    i{font-size:20px;margin-right:8px;}                    
+                 }
+           }
+.contactAdd{
+             height:auto;overflow:hidden;margin-left:25px;
+             li{
+                 font:14px/24px $font;color:#555;
+                 b{font-weight:700;}
+               }
+           }           
+.imgCom{height:auto;overflow:hidden;text-align:center;margin:20px 0;}
+/*----供应商信息代码----*/
+.inforMain{
+            height:auto;overflow:hidden;margin-left:300px;border:$border;padding:35px 38px 0;@include bgsize("logoBg.png");background-position:726px 34px;background-color:#fff;
+            h3{font:24px/44px $font;color:#333;text-align:center;}
+            p{font:16px/37px $font;color:#777;text-align:center;}
+          }
+.inforObject{
+              height:auto;overflow:hidden;margin-top:23px;@include bgsize("inforIcon.png");background-position:0 63px;
+              dt{font:bold 15px/62px $font;color:#555;border-bottom:1px dashed #e4e4e4;}
+              dd{font:14px/58px $font;border-bottom:1px dashed #e4e4e4;padding-left:50px;} 
+            }
+.inforStand{
+            height:auto;overflow:hidden;margin-top:36px;
+            dt{font:bold 15px/60px $font;color:#555;}
+            dd{
+                padding:22px 28px 22px 82px;height:auto;overflow:hidden;font:14px/22px $font;color:#555;background:#FBFBFB;float:left;margin:0 10px 12px 0;width:290px;position:relative;
+                b{
+                    font:28px/32px arial;color:#555;border-right:1px solid #000;display:block;width:40px;position:absolute;left:28px;top:18px;
+                    span{display:block;font:14px/22px $font;}
+                 }
+              }
+           }
+.inforAddres{
+              margin-top:50px;height:170px;border:1px solid #333;border-top:none;position:relative;
+              p{font:14px/26px $font;color:#555;}
+              .inforLine{  
+                          padding: 0 20px 0;
+                          margin: 20px 0;
+                          line-height: 1px;
+                          border-left: 294px solid #333;
+                          border-right: 294px solid #333;
+                          text-align: center;
+                          height:1px;display:block;
+                          position:absolute;left:0;top:-20px;
+            }
+            
+}
+.inforTel{
+            font:28px/44px $font;color:#666;height:auto;overflow:hidden;padding:30px 0 6px;text-align:center;
+            strong{font:32px/44px $font;color:#222;margin:0 8px;}
+            .inforTip{font:bold 14px/14px $font;color:#666;}
+         } 
+.inforSelect{background:#e9536b;text-align:center;font:14px/44px $font;color:#fff;@include wh(822px,44px);margin-top:15px;}

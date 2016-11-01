@@ -1,0 +1,10 @@
+@charset "utf-8";
+/*---- 向上滚动 ----*/
+.scrollMain{
+            height:auto;overflow:hidden;margin:20px 0 36px;
+            .scrollTit{float:left;font-weight:normal;}
+}
+#scrollText{height:24px;overflow:hidden;float:left;margin-left:4px;}
+#scrollText li {height: 24px;cursor:pointer;}
+#scrollText li:hover a{color:#89582B;}
+#scrollText li a{float:left;display:block;overflow:hidden;height:24px;}

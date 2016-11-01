@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="utf-8" />
+	<title>文章搜索</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="Keywords" content="关键词"/>
+	<meta name="Description" content="网页的描述"/>
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/news.css" type="text/css"/>
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<!--[if lt IE 9]>
+	    <script src="js/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!-- #include file="header.html" -->
+<!----公司介绍---->
+<div class="comMain">
+	<div class="comConment">
+		<!--左侧栏-->
+		<aside class="sideBar" id="sideBar">
+			<h2 id="sideTitle">新闻中心</h2>
+			<ul class="sideList" id="sideList">
+				<li><a href="" target="_self" title="公司新闻">公司新闻 <b>Company news</b><i class="iconfont">&#xe602;</i></a></li>
+				<li><a href="" target="_self" title="行业动态">行业动态 <b>Industry dynamics</b><i class="iconfont">&#xe602;</i></a></li>
+			</ul>
+			<!--#include file="sideAd.html"-->
+		</aside>
+		<div class="breadNav">
+			<i class="iconfont">&#xe60a;</i><a href="">首页</a><code>></code><a href="">新闻中心</a><code>></code>文章搜索
+		</div>
+		<article class="newsText">
+			<form action="" target="_blank" method="get" class="search-warp">
+				<input class="search-input" type="text" value="请输入关键词" onfocus="this.value=''" onblur="if(this.value==''){this.value='请输入关键词'}">
+				<input class="search-submit" type="submit" value="搜索"/>
+			</form>
+			<div class="searText">
+				关键词：<em>董事长</em>共<em>3</em>条结果
+			</div>
+			<ul class="searList">
+				<li>
+					<a href="" class="searImg"><img src="images/test/listOne.jpg" width="160" height="120" alt=""></a>
+					<a href="" class="searTitle" target="_self" title="">姐弟俩组织一线员工学习，强化安全意识提供健康美味</a>
+					<p>为进一步提高消防安全管理水平，普及操作安全知识和技能，加强对食品安全重要性的认知，姐弟俩训练学院于日前组织了一场安全知识培训课。</p>
+					<time><i class="iconfont">&#xe601;</i>16-09-13 14:18</time>
+				</li>
+				<li>
+					<a href="" class="searImg"><img src="images/test/listTwo.jpg" width="160" height="120" alt=""></a>
+					<a href="" class="searTitle" target="_self" title="">姐弟俩董事长心系一线 炎炎夏日送清凉</a>
+					<p>最近的郑州真是分分钟“热死人”的节奏，走在街上真的是和烤肉只差一撮孜然。而我们姐弟俩人仍在高温高热的环境中坚守在一线，尽心尽力的干好本职工作，配锅、烹煮、洗刷，用心完成每一个工作。</p>
+					<time><i class="iconfont">&#xe601;</i>16-09-13 14:18</time>
+				</li>
+				<li>
+					<a href="" class="searImg"><img src="images/test/listThr.jpg" width="160" height="120" alt=""></a>
+					<a href="" class="searTitle" target="_self" title="">热烈庆祝姐弟俩中央工厂暨熙康食品有限公司建成升旗仪式</a>
+					<p>为进一步提高消防安全管理水平，普及操作安全知识和技能，加强对食品安全重要性的认知，姐弟俩训练学院于日前组织了一场安全知识培训课。</p>
+					<time><i class="iconfont">&#xe601;</i>16-09-13 14:18</time>
+				</li>
+			</ul>
+			<div class="Share">
+			    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>
+			    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+			<!-- #include file="scroll.html" -->
+		</article>		
+	</div>	
+</div>
+<!-- #include file="navSlide.html" -->
+<!-- #include file="footer.html" -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	//内页向上滚动	
+	var mocBox=document.getElementById("scrollText");
+	mocBox.innerHTML+=mocBox.innerHTML;	
+	mocBox.scrollTop=0;
+	var iLiHeight=24;
+	var time;
+	function starMove(){
+		mocBox.scrollTop++;
+		time=setInterval('scrollUp()',50);
+	}
+	function scrollUp(){		
+		if(mocBox.scrollTop % iLiHeight==0){
+			clearInterval(time);
+			setTimeout("starMove()",2000)
+		}else{
+			mocBox.scrollTop++;
+			if(mocBox.scrollTop>=mocBox.scrollHeight/2){
+				mocBox.scrollTop=0;
+			}
+		}
+	}
+	setTimeout("starMove()",2000);
+</script>
+</body>
+</html>
